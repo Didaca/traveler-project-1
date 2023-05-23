@@ -1,0 +1,143 @@
+
+.login_header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 80vh;
+    background-image: url("../../../../public/images/login-register.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 4px;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+    border-radius: 4px;
+    opacity: 0.5;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 300px;
+    left: 800px;
+    background: transparent;
+    border-radius: 4px;
+    inset: 2px;
+    z-index: 1;
+    padding: 40px 50px;
+}
+
+.form h2 {
+    text-align: center;
+    color: rgb(84, 233, 84);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.form .inputbox {
+    position: relative;
+    width: 280px;
+    margin-top: 35px;
+}
+
+.inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 10px 5px 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputbox label {
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    padding: 10px 5px 5px;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.inputbox input:valid ~ label,
+.inputbox input:focus ~ label {
+    color: var(--green);
+    font-size: 0.75em;
+    transform: translateY(-30px);
+}
+
+.inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    pointer-events: none;
+    background: var(--green);
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.inputbox input:valid ~ i,
+.inputbox input:focus ~ i {
+    height: 30px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    text-decoration: none;
+    margin: 12px 0;
+    color: var(--primary);    
+}
+
+.links a:hover {
+    color: rgb(84, 233, 84);
+}
+
+.links a:nth-child(2) {
+    color: rgb(84, 233, 84);
+}
+
+.form button {
+    margin: 30px 0;
+    width: 100%;
+    height: 34px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--green);
+    background: transparent;
+    border: 2px solid var(--green);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    color: var(--gray-dark);
+    background: var(--green);
+    box-shadow: 0px 0px 18px var(--green);
+}

@@ -1,0 +1,38 @@
+.container_top {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+}
+
+.row {
+    max-width: 1140px;
+    width: 1140px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 36px;
+}
+
+.textL,
+.textR {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.textL i {
+    margin-right: 6px;
+}
+
+.textR a {
+    width: 14px;
+    color: var(--primary);
+}
+
+a.hover:hover {
+    color: var(--primary_hover);
+}

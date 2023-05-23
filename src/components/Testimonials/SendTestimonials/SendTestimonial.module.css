@@ -1,0 +1,74 @@
+.section_testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 90vh;
+}
+
+.testimonial_header {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 24px 48px;
+    background-image: url('../../../../public/images/send-testimonial.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 4px;
+}
+
+.testimonial_form {
+    width: 100%;
+    padding: 24px 48px;
+}
+
+.testimonial_form h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--gray-dark);
+    margin-bottom: 24px;
+}
+
+.testimonial_form_inputbox textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+    border: 2px solid var(--gray);
+    border-radius: 4px;
+    padding: 12px 24px;
+}
+
+.testimonial_form_inputbox textarea:focus {
+    border: none;
+    outline: none;
+}
+
+.testimonial_button,
+.testimonial_button_edit,
+.testimonial_button_delete {
+    width: 200px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border: 2px solid var(--gray);
+    border-radius: 4px;
+    background-color: var(--white);
+    margin-top: 24px;
+}
+
+.testimonial_button_edit {
+    margin-right: 48px;
+}
+
+.testimonial_button:hover,
+.testimonial_button_edit:hover,
+.testimonial_button_delete:hover {
+    color: var(--white);
+    border-color: var(--gray);
+    background-color: var(--submit);
+    cursor: pointer;
+}

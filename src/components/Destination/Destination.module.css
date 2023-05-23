@@ -1,0 +1,110 @@
+.section_destinations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.destination_container {
+    width: 1140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 140px 0;
+    background-color: var(--light);
+}
+
+/* header */ 
+
+.destination_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destination_content_h6 {
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary);
+}
+
+.destination_content_h1 {
+    font-size: 42px;
+    letter-spacing: 0.4px;
+    color: var(--dark);
+}
+
+/* articles */
+
+.section_destination_articles {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.article_destination {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.article_destination::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    top: calc(200px/2 - 50px);
+    left: calc(300px/2 - 100px);
+    border-radius: 4px;
+    background-color: var(--dark);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.article_destination_content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.article_destination_content img {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.article_destination_content_text {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: calc(200px/2 - 50px);
+    left: calc(300px/2 - 100px);
+    text-align: center;
+    padding: 6px 12px;
+    color: var(--white);
+    cursor: pointer;
+    z-index: 3;
+}
+
+.article_destination_content_text > p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 500;
+}
