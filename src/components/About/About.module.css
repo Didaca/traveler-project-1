@@ -103,7 +103,7 @@
 .article_conteiner {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
 }
 
 .article_icon {

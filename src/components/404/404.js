@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export const Error404 = () => {
     return (
-        <section className={styles.section_404}>
+        <section className={styles.section_error_page}>
             <div className={styles.cube}>
                 <div className={styles.up}></div>
                 <div className={styles.param}>
