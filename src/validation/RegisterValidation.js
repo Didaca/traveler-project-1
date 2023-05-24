@@ -32,7 +32,7 @@ function RegisterValidation(element) {
             name = true;
         };
 
-        if (/[^a-zA-Z]/.test(lastEl)) {
+        if (/[^a-zA-Z\s]/.test(lastEl)) {
 
             errN = errorsV.nameM;
             name = false;

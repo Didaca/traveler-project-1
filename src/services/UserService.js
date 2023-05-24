@@ -52,7 +52,6 @@ export const RegU = async ({
             .catch((error) => {alert(error.message)})
 
             data = user;
-            console.log(data)
         })
         .catch((error) => {
             const errorCode = error.code;

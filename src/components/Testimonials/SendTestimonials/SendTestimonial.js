@@ -6,7 +6,7 @@ import styles from './SendTestimonial.module.css';
 export const SendTestimonial = () => {
 
     const {
-        onAddTestimonial
+        onCreateTestimonial
     } = useContext(IdContext);
 
     const onSubmitTestimonial = (e) => {
@@ -14,7 +14,7 @@ export const SendTestimonial = () => {
 
         const obj = Object.fromEntries(new FormData(e.target));
 
-        onAddTestimonial({...obj});
+        onCreateTestimonial({...obj});
     }
 
     return (

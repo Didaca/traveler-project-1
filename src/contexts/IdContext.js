@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import { AddTestimonial, DeleteTestimonial, EditTestimonial, GetTestimonials } from "../services/TestimonialService";
+import { CreateTestimonial, DeleteTestimonial, EditTestimonial, GetTestimonials } from "../services/TestimonialService";
 import { AuthorContext } from "./AuthorContext";
 
 
@@ -25,12 +25,7 @@ export const IdProvider = ({
    
 
     const {
-        userId,
-        token,
-        firstname,
-        lastname,
-        profession,
-        picture
+        author
     } = useContext(AuthorContext);
 
 
@@ -44,16 +39,14 @@ export const IdProvider = ({
     }, [testimonial]);
 
 
-    const onAddTestimonial = async ({text}) => {
+    const onCreateTestimonial = async ({text}) => {
         try {
 
-            const newTestimonial = await AddTestimonial(token, {
+            const newTestimonial = await CreateTestimonial({
                 text,
-                userId,
-                firstname,
-                lastname,
-                profession,
-                picture
+                userId: author.uid,
+                userName: author.displayName,
+                userURL: author.photoURL
             });
 
             setTestimonial(newTestimonial);
@@ -66,16 +59,11 @@ export const IdProvider = ({
         }
     };
 
-    const onEditTestimonial = async (testimID, {text}) => {
+    const onEditTestimonial = async (id, {text}) => {
         try {
 
-            const newTestimonial = await EditTestimonial(testimID, token, {
-                text,
-                userId,
-                firstname,
-                lastname,
-                profession,
-                picture
+            const newTestimonial = await EditTestimonial(id, {
+                text
             });
 
             setTestimonial(newTestimonial);
@@ -89,10 +77,10 @@ export const IdProvider = ({
     };
 
 
-    const onDeleteTestimonial = (testimID) => {
+    const onDeleteTestimonial = (id) => {
         try {
 
-            DeleteTestimonial(testimID, token);
+            DeleteTestimonial(id);
 
             setTestimonial({});
             navigate('/packages');
@@ -106,7 +94,7 @@ export const IdProvider = ({
 
 
     const allTestimValuesProvider = {
-        onAddTestimonial,
+        onCreateTestimonial,
         onEditTestimonial,
         onDeleteTestimonial,
         testim_obj,
