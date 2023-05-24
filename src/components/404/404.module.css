@@ -1,4 +1,4 @@
-.section_error_page {
+.error404 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,6 +75,8 @@
 .message {
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     color: wheat;
     text-align: center;
     font-size: 20px;
