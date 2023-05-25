@@ -18,6 +18,7 @@ export const AuthorProvider = ({
 
     const [author, setAuthor] = useLocalStorage('user', {});
     const [show, setShow] = useState(false);
+    const [userLogin, setUserLogin] = useState(false);
   
     
     
@@ -40,6 +41,7 @@ export const AuthorProvider = ({
             }
 
             setAuthor(result);
+            setUserLogin(true);
             navigate('/destinations');
 
         } catch (error) {
@@ -66,6 +68,7 @@ export const AuthorProvider = ({
     const onLogout = () => {
         LogOut();
         changeAuthor();
+        setUserLogin(false);
 
         navigate('/');
     }
@@ -93,7 +96,7 @@ export const AuthorProvider = ({
         onLogout,
         onEdit,
         author,
-        isLogged: author.uid ?true :false,
+        isLogged: userLogin,
         onShowHandler,
         show
     }
