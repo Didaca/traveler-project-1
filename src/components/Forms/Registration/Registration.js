@@ -46,7 +46,7 @@ export const Registration = () => {
                         {hasErrorP && (<p className={styles.reg_errors}>{hasErrorP}</p>)}
                         <div className={styles.inputbox}>
                             <input type="url" name="picture" required="required" value={values.picture} onChange={onInputHandler}/>
-                            <label htmlFor="picture">Picture</label>
+                            <label htmlFor="picture">Picture url</label>
                             <i></i>
                         </div>
                         <button>Signup</button>
