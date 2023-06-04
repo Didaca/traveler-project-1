@@ -5,4 +5,4 @@
 - firestore database
 - hosting
 
-    https://dvi-traveler.web.app/
+https://dvi-traveler.web.app/
