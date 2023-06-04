@@ -6,3 +6,5 @@
 - hosting
 
 https://dvi-traveler.web.app/
+
+!["App main page"](/client/public/images/app_main_page.png)
